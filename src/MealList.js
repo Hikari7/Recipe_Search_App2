@@ -1,7 +1,10 @@
 import React from "react";
 import Meal from "./Meal";
 
-export default function MealList({ mealData }) {  //App.jsから取ってきたprops
+//↑子コンポーネントからimportしてそれを使うMeal.jsの関数が使えるようになる(meal)
+
+export default function MealList({ mealData }) {
+  //App.jsから取ってきたprops
   const nutrients = mealData.nutrients;
 
   return (
@@ -16,7 +19,7 @@ export default function MealList({ mealData }) {  //App.jsから取ってきたp
         </ul>
       </section>
 
-      <section className="meals">
+      <section className="meals">A~
         {mealData.meals.map((meal) => {
           return <Meal key={meal.id} meal={meal} />;
         })}
@@ -24,3 +27,5 @@ export default function MealList({ mealData }) {  //App.jsから取ってきたp
     </main>
   );
 }
+
+//App.jsの子コンポーネント
